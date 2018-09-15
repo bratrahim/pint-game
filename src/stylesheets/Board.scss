@@ -1,0 +1,125 @@
+
+
+.board {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+.pint-shadow
+{
+  width: 1px;
+  margin:auto;
+
+  box-shadow: 0px 10px 109px 20px rgba(0,0,0,0.75);
+  transition: all 0.2s;
+  &.hide {
+    opacity: 0;
+    box-shadow: 0px 10px 0px 0px rgba(0,0,0,0.75);
+  }
+}
+
+.pint{
+position: relative;
+  height:100px;
+  width: 100px;
+  margin: 10px;
+  background-image: url(../../assets/beer.svg);
+  transition: all 0.15s ease-in;
+  &.full {
+
+  }
+  &.empty {
+    transform: rotate(30deg);
+    transform-origin: 300px 30px;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.panel{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.rules {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  color: #4A2328;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  background-color: #EDB248;
+  margin: 10px;
+  border: 3px #4A2328 solid;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #FBCF4C;
+}
+
+button:disabled {
+  background-color: rgba(255, 211, 79, 0.33);
+}
+
+.mask
+{
+  position: fixed;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.8);
+  animation: 0.3s modalAnimation;
+  .mask-container
+  {
+    display:flex;
+    margin: auto;
+    background-color: #E2E2E2;
+    max-width: 300px;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+    padding: 20px;
+    button {
+      width: 70%;
+      margin: auto;
+    }
+  }
+  .message-container
+  {
+
+    display: flex;
+  }
+  .message{
+    color: #4A2328;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .message-img
+  {
+    width: 120px;
+  }
+}
+
+@keyframes modalAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

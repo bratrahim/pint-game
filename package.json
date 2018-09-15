@@ -1,0 +1,56 @@
+{
+  "name": "beer-game",
+  "version": "1.0.0",
+  "description": "Try to drink the last pint!",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --open --inline --hot",
+    "lint": "eslint src",
+    "lint-fixup": "eslint src --ext .js --fix",
+    "server": "node server.js"
+  },
+  "keywords": [],
+  "author": "Tomas Kovtun",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.3",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "express": "^4.16.3",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "path": "^0.12.7",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15",
+    "webpack-dev-middleware": "^3.1.2",
+    "webpack-dev-server": "^3.1.3",
+    "webpack-hot-middleware": "^2.22.1"
+  }
+}
