@@ -59,3 +59,10 @@ typings/
 
 # next.js build output
 .next
+
+
+dist
+.firebase
+.firebase.json
+.firebaserc
+.idea
